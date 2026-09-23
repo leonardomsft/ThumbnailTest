@@ -1,26 +1,26 @@
-Test 1 (works)
+Repro Steps: 
 
-- Click File-Use Caption
-  A window that refreshes once a second is displayed
+
+Test 1 (working)
+
+- Click File -> Create window with Caption
+  A window with a title bar is created
  
-- Click File-Thumbnail
-  A window using DwmRegisterThumbail is shown below the "source" window
+- Click File -> Create Thumbnail
+  A thumbnail window is created below the "source" window
 
-- Drag source window: You can click on caption or client area
-  Thumbnail window is still visible, at the same position, mirroring source window
+- Drag source window (using the tittle bar or client area)
+  The thumbnail window is still visible, at the same position, mirroring source window
 
 --------------------------------------------------------------------------------------
 
-Test 2 (fails)
+Test 2 (non-working)
 
-- Click File-No Caption
-  A window that refreshes once a second is displayed
+- Click File -> Create window with No Caption
+  A borderless window is created
  
-- Click File-Thumbnail
-  A window using DwmRegisterThumbail is shown below the "source" window
+- Click File -> Create Thumbnail
+  A thumbnail window is created below the "source" window
 
-- Drag source window: You can click on client area
-  Thumbnail window is rendered (DWM?) at the wrong position.
-
-Note that the issue does not depend on interactively moving the window
-Instead of dragging source window, you can click File-Move Counter twice or more to reproduce the issue.
+- Drag source window: (using the tittle bar or client area)
+  Thumbnail window is rendered at the wrong position.

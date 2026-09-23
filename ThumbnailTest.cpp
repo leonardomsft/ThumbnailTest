@@ -184,14 +184,14 @@ LRESULT CALLBACK MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPar
             case ID_FILE_THUMBNAIL:
                 if (!hwndLastCounter)
                 {
-                    MessageBox(hWnd, L"Create counter first", NULL, MB_OK);
+                    MessageBox(hWnd, L"Create source window first", NULL, MB_OK);
                 }
                 else
                 {
                     // Thumbnail window is created below source window
                     RECT r;
                     GetWindowRect(hwndLastCounter, &r);
-                    HWND hwndThumbnail = CreateWindowExW(WS_EX_LAYERED, szThumbnailClass, L"Thumbnail", WS_POPUP | WS_VISIBLE, r.left, r.bottom + 30, r.right - r.left, r.bottom - r.top,
+                    HWND hwndThumbnail = CreateWindowExW(WS_EX_LAYERED, szThumbnailClass, L"Thumbnail", WS_POPUP | WS_VISIBLE, r.left, r.bottom + 20, r.right - r.left, r.bottom - r.top,
                         nullptr, nullptr, hInst, nullptr);
                 }
                 break;
@@ -375,3 +375,4 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
     }
     return (INT_PTR)FALSE;
 }
+

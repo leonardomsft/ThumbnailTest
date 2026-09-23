@@ -3,5 +3,8 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="readme.txt" />
+  </Folder>
   <Project Path="ThumbnailTest.vcxproj" Id="ed5713cc-0afa-415c-ba1d-a477ce99dc8e" />
 </Solution>
